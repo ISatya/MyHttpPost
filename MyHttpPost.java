@@ -179,7 +179,7 @@ public class MyHttpPost {
 		private static boolean writeRequest(HttpURLConnection connection, String body) {
 			try {
 										
-					OutputStream wr = new connection.getOutputStream();
+					OutputStream wr = connection.getOutputStream();
 					wr.write(body.getBytes());					
 					wr.close();
 						
