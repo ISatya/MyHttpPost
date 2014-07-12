@@ -179,8 +179,8 @@ public class MyHttpPost {
 		private static boolean writeRequest(HttpURLConnection connection, String body) {
 			try {
 										
-					OutputStream wr = connection.getOutputStream();
-					wr.write(body.getBytes());					
+					OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());
+					wr.write(body);										
 					wr.close();
 						
 					return true;
